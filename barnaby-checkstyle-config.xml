@@ -32,7 +32,7 @@
 
 <module name="Checker">
     <module name="SuppressionFilter">
-        <property name="file" value="c:/docs/workspace/settings/suppressions.xml"/>
+        <property name="file" value="c:/docs/git/settings/suppressions.xml"/>
     </module>
 
     <!--
