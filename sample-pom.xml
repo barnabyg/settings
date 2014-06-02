@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.blizzardtec</groupId>
+  <artifactId>common</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.blizzardtec.plugins</groupId>
+        <artifactId>maven-streambase-plugin</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <configuration>
+          <sbPlugins/>
+          <operatorParameters>
+            <operatorParameter implementation="com.blizzardtec.xmlfilebuilders.streambase.model.OperatorParamEntry">
+              <name>myName</name>
+              <value>myValue</value>
+            </operatorParameter>
+          </operatorParameters>
+          <moduleSearchPaths/>
+          <operatorResourceSearchPaths/>
+          <customFunctions>
+            <customFunction implementation="com.blizzardtec.xmlfilebuilders.streambase.model.CustomFunctionEntry">
+             <alias>isWarnEnabled</alias>
+             <args>
+               <arg>auto</arg>
+             </args>
+             <funcClass>yak.streambase.logger.LogUtil</funcClass>
+             <language>java</language>
+             <name>isWarnEnabled</name>
+             <type>simple</type>
+            </customFunction>
+          </customFunctions>
+          <directorys/>
+          <extensions>
+            <extension>sbapp</extension>
+            <extension>sbconf</extension>
+            <extension>xml</extension>
+          </extensions>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>install</phase>
+            <goals>
+              <goal>install</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
