@@ -65,7 +65,9 @@
     
     <!-- Checks for whitespace                               -->
     <!-- See http://checkstyle.sf.net/config_whitespace.html -->
-    <module name="FileTabCharacter"/>
+    <module name="FileTabCharacter">
+       <property name="fileExtensions" value="java, xml, py"/>
+    </module>
 
     <!-- Miscellaneous other checks.                   -->
     <!-- See http://checkstyle.sf.net/config_misc.html -->
@@ -74,6 +76,7 @@
        <property name="minimum" value="0"/>
        <property name="maximum" value="0"/>
        <property name="message" value="Line has trailing spaces."/>
+       <property name="fileExtensions" value="java, xml, py"/>
     </module>
 
     <!-- Checks for Headers                                -->
