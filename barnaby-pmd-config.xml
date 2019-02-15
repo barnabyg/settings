@@ -12,13 +12,22 @@
   <rule ref="rulesets/java/basic.xml"/>
   <rule ref="rulesets/java/unusedcode.xml"/>
   <rule ref="rulesets/java/imports.xml"/>
-  <rule ref="rulesets/java/design.xml"/>
-
-  <rule ref="rulesets/java/design.xml/AvoidDeeplyNestedIfStmts">
-    <properties>
-      <property name="problemDepth" value="4"/>
-    </properties>
+<!--   <rule ref="rulesets/java/design.xml"/> -->
+  <rule ref="rulesets/java/design.xml">
+    <exclude name="DataClass"/>
   </rule>
+
+<!--   <rule ref="rulesets/java/design.xml/AvoidDeeplyNestedIfStmts"> -->
+<!--     <properties> -->
+<!--       <property name="problemDepth" value="4"/> -->
+<!--     </properties> -->
+<!--   </rule> -->
+
+<!--   <rule ref="category/java/design.xml/DataClass"> -->
+<!--     <properties> -->
+<!--       <property name="problemDepth" value="4"/> -->
+<!--     </properties> -->
+<!--   </rule> -->
 
 <!--   <rule ref="rulesets/java/design.xml/AvoidSynchronizedAtMethodLevel"> -->
 <!--     <priority>5</priority> -->
@@ -28,11 +37,11 @@
 <!--     <priority>5</priority> -->
 <!--   </rule> -->
 
-  <rule ref="rulesets/java/strings.xml/AvoidDuplicateLiterals">
-    <properties>
-      <property name="maxDuplicateLiterals" value="10"/>
-    </properties>
-  </rule>
+<!--   <rule ref="rulesets/java/strings.xml/AvoidDuplicateLiterals"> -->
+<!--     <properties> -->
+<!--       <property name="maxDuplicateLiterals" value="10"/> -->
+<!--     </properties> -->
+<!--   </rule> -->
 
 <!--   <rule ref="rulesets/java/controversial.xml/AssignmentInOperand"> -->
 <!--      <priority>5</priority> -->
